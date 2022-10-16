@@ -4,19 +4,17 @@ import {BrowserModule} from '@angular/platform-browser';
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {ToolbarComponent} from './toolbar/toolbar.component';
-import {MatToolbarModule} from "@angular/material/toolbar";
+import {ToolbarModule} from "./shared/ui/toolbar/toolbar.module";
 
 @NgModule({
   declarations: [
     AppComponent,
-    ToolbarComponent,
   ],
   imports: [
-    MatToolbarModule,
-    BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    BrowserModule,
+    ToolbarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

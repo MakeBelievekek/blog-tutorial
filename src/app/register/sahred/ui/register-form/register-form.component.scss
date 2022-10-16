@@ -1,0 +1,66 @@
+.registration-form {
+  form {
+    padding: 0;
+    margin: 0;
+
+    form-inputs, form-checkboxes {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .mat-form-field {
+      width: 100%;
+
+      input, mat-label {
+        font-size: 1rem;
+      }
+    }
+
+    mat-checkbox {
+      margin-top: 1rem;
+      display: block;
+      font-size: 1rem;
+
+      ::ng-deep .mat-checkbox-label {
+        padding-left: 0.5rem;
+      }
+
+      ::ng-deep .mat-checkbox .mat-checkbox-frame {
+        transform: scale(1.5);
+      }
+
+      ::ng-deep .mat-checkbox-checked .mat-checkbox-background {
+        transform: scale(1.5);
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1020px) {
+  .registration-form {
+    form {
+      text-align: center;
+
+      .form-checkboxes {
+        width: 80%;
+        text-align: left;
+        position: relative;
+        // this value is the half of the mat-form-field padding-right
+        left: -2rem;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      form-inputs, form-checkboxes {
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+
+      mat-form-field {
+        width: 40% !important;
+        padding-right: 2rem;
+      }
+    }
+  }
+}

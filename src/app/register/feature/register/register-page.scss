@@ -1,5 +1,68 @@
-.container {
-  background-color: red;
-  width: 100%;
-  height: 200px;
+.registration-page {
+  padding: 0 2rem 0 2rem;
+
+  h1, span {
+    display: block;
+    font-family: sans-serif;
+  }
+
+  h1 {
+    font-size: 1.75rem;
+    font-weight: bolder;
+  }
+
+  span {
+    font-size: 1.5rem;
+  }
+
+  .greetings {
+    padding-top: 2rem;
+    text-align: center;
+
+    h1 {
+      line-height: 1.1rem;
+    }
+
+    &-question {
+      padding-top: 1rem;
+      line-height: 1.8rem;
+    }
+
+  }
+
+  .icons {
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+
+    &-stack {
+      text-align: center;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+
+      div {
+        padding-top: 2rem;
+        width: 170px;
+      }
+
+      span {
+        padding-top: 0.5rem;
+        font-size: 1rem;
+      }
+
+      #wallet-svg, #envelope-svg, #coin-svg {
+        height: 100px;
+      }
+    }
+  }
+  .actions {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    text-align: center;
+  }
+  /*
+  mat-form-field {
+    width: 100%;
+  }
+  */
 }

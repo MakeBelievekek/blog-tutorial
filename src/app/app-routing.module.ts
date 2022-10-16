@@ -3,7 +3,7 @@ import {RouterModule, Routes} from '@angular/router';
 
 const routes: Routes = [
   {
-    path: '',
+    path: 'home',
     loadChildren: () => import('./home/feature/home-shell/home-shell.module').then((m) => m.HomeShellModule),
   },
   {
@@ -13,6 +13,10 @@ const routes: Routes = [
   {
     path: 'register',
     loadChildren: () => import('./register/feature/register-shell/register-shell.module').then((m) => m.RegisterShellModule),
+  },
+  {
+    path: '',
+    redirectTo:  '/home', pathMatch: 'full' ,
   },
 ];
 

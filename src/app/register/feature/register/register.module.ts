@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import {RegisterPage} from "./register-page";
 import {RegisterRoutingModule} from "./register-routing.module";
 import {RegisterFormModule} from "../../sahred/ui/register-form/register-form.module";
+import {MatButtonModule} from "@angular/material/button";
 
 
 
@@ -13,7 +14,8 @@ import {RegisterFormModule} from "../../sahred/ui/register-form/register-form.mo
   imports: [
     CommonModule,
     RegisterRoutingModule,
-    RegisterFormModule
+    RegisterFormModule,
+    MatButtonModule,
   ]
 })
 export class RegisterModule { }
