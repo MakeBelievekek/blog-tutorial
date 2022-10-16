@@ -2,6 +2,9 @@ import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {HomePage} from "./home-page";
 import {HomeRoutingModule} from "./home-routing.module";
+import {LandingSectionModule} from "../../sahred/ui/landing-section/landing-section.module";
+import {MatCardModule} from "@angular/material/card";
+import {MatButtonModule} from "@angular/material/button";
 
 
 @NgModule({
@@ -10,7 +13,10 @@ import {HomeRoutingModule} from "./home-routing.module";
   ],
   imports: [
     CommonModule,
-    HomeRoutingModule
+    HomeRoutingModule,
+    LandingSectionModule,
+    MatCardModule,
+    MatButtonModule
   ]
 })
 export class HomeModule { }

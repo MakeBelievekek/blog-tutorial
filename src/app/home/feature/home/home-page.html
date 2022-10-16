@@ -1,1 +1,40 @@
-<p>home-page works!</p>
+<section id="landing" class="landing">
+  <div class="landing-background"></div>
+  <div class="card position-absolute card-position">
+    <div class="card-content">
+      <h1>A BLOGOLÁS MÉG SOHA NEM VOLT ILYEN EGYSZERŰ!</h1>
+      <span>Blogküldés országosan automatákba vagy házhoz szállítással.</span>
+      <button mat-stroked-button color="primary" [routerLink]="['../register']">REGISZTRÁCIÓ</button>
+    </div>
+  </div>
+</section>
+<section id="app" class="app">
+  <h1>TÖLTSD LE A BLOG APPLIKÁCIÓT!</h1>
+  <div class="app-logo">
+    <img src="/assets/images/apple_store_50.png" alt="">
+    <img src="/assets/images/googleplay_50.png" alt="">
+  </div>
+</section>
+<section id="tracking" class="tracking">
+  <h1>BLOG-ÖTLETELÉS</h1>
+  <span>Írd be a blog ötletedet és mi pedig megmutatjuk, lesze belőle valaha valami!</span>
+  <div class="tracking-lookup">
+    <input type="text" placeholder="Jó ötlet...vagy">
+    <button mat-flat-button color="primary">Megnézem</button>
+  </div>
+  <span class="font-w-normal">
+    Ha automatába adtad fel, a CLFOX betűkkel kezdődő csomagazonosítót írd ide!
+    Vagy ha házhoz szállítást választottad, az 50139-cel kezdődő számsor a csomagazonosítód.
+  </span>
+  <div class="tracking-help">
+   <span>
+    Hol találom a kódomat?
+   </span>
+    <span>
+    Segítségre van szükséged?
+   </span>
+  </div>
+</section>
+<section id="blog" class="blog">
+  <h1>BLOG</h1>
+</section>
