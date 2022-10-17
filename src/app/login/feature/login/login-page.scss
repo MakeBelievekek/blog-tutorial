@@ -63,7 +63,7 @@
     }
 
     .card {
-      overflow-y: hidden;
+      overflow-x: hidden;
       position: relative;
       left: 0;
       top: 0;
@@ -101,10 +101,15 @@
       justify-content: flex-end;
       position: relative;
 
+      &-left-side{
+        width: 50%;
+        position: relative;
+      }
+
       &-logo {
         position: absolute;
-        top: 20px;
-        left: 100px;
+        top: -10px;
+        right: 0;
         display: block;
         width: 350px;
         height: 250px;
@@ -115,11 +120,10 @@
       }
 
       &-inputs {
+        width: 50%;
         display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        margin-right: 4rem;
-
+        flex-direction: column;
+        align-items: center;
       }
 
       mat-form-field {
@@ -128,15 +132,17 @@
     }
 
     .actions {
-      padding-top: 2rem;
-      text-align: right;
-      margin-right: 6.2rem;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
 
       &-forgot-password{
         text-align: right;
+        width: 80%;
       }
       &-login {
-        width: 33%;
+        width: 80%;
       }
 
     }

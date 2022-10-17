@@ -6,7 +6,9 @@
       <p>Jelentkezz be és élvezd a gyors, rugalmas és környezettudatos csomagküldést!</p>
     </section>
     <section class="login">
-      <div class="login-left-side login-logo"></div>
+      <div class="login-left-side">
+        <div class="login-left-side login-logo"></div>
+      </div>
       <!-- email -->
       <div class="login-right-side login-inputs">
         <mat-form-field class="login-input login-email" appearance="standard">
@@ -26,13 +28,13 @@
                  placeholder="Jelszó"
           >
         </mat-form-field>
+        <section class="actions">
+          <div class="actions-forgot-password">
+            <span>Elfeljtett jelszó</span>
+          </div>
+          <button class="actions-login" mat-flat-button color="primary">BELÉPÉS</button>
+        </section>
       </div>
-    </section>
-    <section class="actions">
-      <div class="actions-forgot-password">
-        <span>Elfeljtett jelszó</span>
-      </div>
-      <button class="actions-login" mat-flat-button color="primary">BELÉPÉS</button>
     </section>
   </div>
 </div>
