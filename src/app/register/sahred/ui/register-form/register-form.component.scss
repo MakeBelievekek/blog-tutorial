@@ -52,13 +52,15 @@
         margin-right: auto;
       }
 
-      form-inputs, form-checkboxes {
+      .form-inputs, .form-checkboxes {
         flex-direction: row;
         flex-wrap: wrap;
+        justify-content: space-between;
       }
 
+
       mat-form-field {
-        width: 42% !important;
+        width: 40% !important;
         padding-right: 2rem;
       }
     }
