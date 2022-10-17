@@ -1,10 +1,9 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
 import {RegisterPage} from "./register-page";
 import {RegisterRoutingModule} from "./register-routing.module";
-import {RegisterFormModule} from "../../sahred/ui/register-form/register-form.module";
+import {RegisterFormModule} from "../../shared/ui/register-form/register-form.module";
 import {MatButtonModule} from "@angular/material/button";
-
 
 
 @NgModule({
@@ -18,4 +17,5 @@ import {MatButtonModule} from "@angular/material/button";
     MatButtonModule,
   ]
 })
-export class RegisterModule { }
+export class RegisterModule {
+}

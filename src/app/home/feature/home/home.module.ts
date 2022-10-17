@@ -2,7 +2,7 @@ import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {HomePage} from "./home-page";
 import {HomeRoutingModule} from "./home-routing.module";
-import {LandingSectionModule} from "../../sahred/ui/landing-section/landing-section.module";
+import {LandingSectionModule} from "../../shared/ui/landing-section/landing-section.module";
 import {MatCardModule} from "@angular/material/card";
 import {MatButtonModule} from "@angular/material/button";
 
