@@ -63,12 +63,6 @@
     padding-bottom: 2rem;
     text-align: center;
   }
-
-  /*
-  mat-form-field {
-    width: 100%;
-  }
-  */
 }
 
 @media only screen and (min-width: 1020px) {
@@ -84,7 +78,7 @@
       top: 0;
       left: -1rem;
       width: 100vw;
-      height: 100vh;
+      height: 500px;
     }
 
     .greetings {

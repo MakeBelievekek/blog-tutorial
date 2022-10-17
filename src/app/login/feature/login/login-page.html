@@ -1,1 +1,38 @@
-<app-login-form></app-login-form>
+<div class="login-page">
+  <div class="background-cover"></div>
+  <div class="card">
+    <section class="header">
+      <h1>BELÉPÉS</h1>
+      <p>Jelentkezz be és élvezd a gyors, rugalmas és környezettudatos csomagküldést!</p>
+    </section>
+    <section class="login">
+      <div class="login-left-side login-logo"></div>
+      <!-- email -->
+      <div class="login-right-side login-inputs">
+        <mat-form-field class="login-input login-email" appearance="standard">
+          <mat-label>E-mail cím</mat-label>
+          <input id="email"
+                 matInput
+                 type="email"
+                 placeholder="E-mail cím"
+          >
+        </mat-form-field>
+        <!-- password -->
+        <mat-form-field class="login-input login-email" appearance="standard">
+          <mat-label>Jelszó</mat-label>
+          <input id="password"
+                 matInput
+                 type="password"
+                 placeholder="Jelszó"
+          >
+        </mat-form-field>
+      </div>
+    </section>
+    <section class="actions">
+      <div class="actions-forgot-password">
+        <span>Elfeljtett jelszó</span>
+      </div>
+      <button class="actions-login" mat-flat-button color="primary">BELÉPÉS</button>
+    </section>
+  </div>
+</div>
