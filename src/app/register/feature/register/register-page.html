@@ -1,32 +1,35 @@
 <div class="registration-page">
-  <section class="greetings">
-    <div class="greetings-header">
-      <h1>REGISZTRÁCIÓ</h1>
-      <h1>MAGÁNSZEMÉLYKÉNT</h1>
-    </div>
-    <div class="greetings-question">
-      <span>Miért érdemes</span>
-      <span>regisztrálni?</span>
-    </div>
-  </section>
-  <section class="icons">
-    <div class="icons-stack">
-      <div>
-        <img id="wallet-svg" src="/assets/svgs/walett.svg" alt="">
-        <span>Tagok olcsóbban használhatják a FOXPOST hálózatát</span>
+  <div class="background-cover"></div>
+  <div class="card">
+    <section class="greetings">
+      <div class="greetings-header">
+        <h1>REGISZTRÁCIÓ</h1>
+        <h1>MAGÁNSZEMÉLYKÉNT</h1>
       </div>
-      <div>
-        <img id="envelope-svg" src="/assets/svgs/envelope.svg" alt="">
-        <span>Kizárólag tagok gyűjthetnek FOXPOST kupont, amellyel további kedvezményeket vehetsz igénybe</span>
+      <div class="greetings-question">
+        <span>Miért érdemes</span>
+        <span>regisztrálni?</span>
       </div>
-      <div>
-        <img id="coin-svg" src="/assets/svgs/coin.svg" alt="">
-        <span>Minden küldeményedet ellenőrizheted és követheted fiókodban</span>
+    </section>
+    <section class="icons">
+      <div class="icons-stack">
+        <div>
+          <img id="wallet-svg" src="/assets/svgs/walett.svg" alt="">
+          <span>Tagok olcsóbban használhatják a FOXPOST hálózatát</span>
+        </div>
+        <div>
+          <img id="envelope-svg" src="/assets/svgs/envelope.svg" alt="">
+          <span>Kizárólag tagok gyűjthetnek FOXPOST kupont, amellyel további kedvezményeket vehetsz igénybe</span>
+        </div>
+        <div>
+          <img id="coin-svg" src="/assets/svgs/coin.svg" alt="">
+          <span>Minden küldeményedet ellenőrizheted és követheted fiókodban</span>
+        </div>
       </div>
+    </section>
+    <app-register-form></app-register-form>
+    <div class="actions">
+      <button mat-flat-button color="primary">Regisztráció</button>
     </div>
-  </section>
-  <app-register-form></app-register-form>
-  <div class="actions">
-    <button mat-flat-button color="primary">Regisztráció</button>
   </div>
 </div>
