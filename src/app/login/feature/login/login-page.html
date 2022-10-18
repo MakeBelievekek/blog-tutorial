@@ -11,28 +11,41 @@
       </div>
       <!-- email -->
       <div class="login-right-side login-inputs">
-        <mat-form-field class="login-input login-email" appearance="standard">
+        <mat-form-field appearance="standard"
+                        class="login-input login-email"
+                        hideRequiredMarker="true"
+        >
           <mat-label>E-mail cím</mat-label>
           <input id="email"
                  matInput
                  type="email"
                  placeholder="E-mail cím"
+                 [formControl]="this.emailControl"
           >
         </mat-form-field>
         <!-- password -->
-        <mat-form-field class="login-input login-email" appearance="standard">
+        <mat-form-field appearance="standard"
+                        class="login-input login-password"
+                        hideRequiredMarker="true"
+        >
           <mat-label>Jelszó</mat-label>
           <input id="password"
                  matInput
                  type="password"
                  placeholder="Jelszó"
+                 [formControl]="this.passwordControl"
           >
         </mat-form-field>
         <section class="actions">
           <div class="actions-forgot-password">
             <span>Elfeljtett jelszó</span>
           </div>
-          <button class="actions-login" mat-flat-button color="primary">BELÉPÉS</button>
+          <button mat-flat-button
+                  color="primary"
+                  class="actions-login"
+                  (click)="this.onLogin()"
+          >BELÉPÉS
+          </button>
         </section>
       </div>
     </section>
