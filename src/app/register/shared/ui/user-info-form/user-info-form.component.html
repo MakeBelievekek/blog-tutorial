@@ -3,85 +3,83 @@
     <!-- inputs -->
     <!-- Vezetéknén/firstName -->
     <div class="form-inputs">
-      <div class="form-input">
-        <mat-form-field class="example-full-width" appearance="standard">
+      <div class="form-input form-input-last-name">
+        <mat-form-field appearance="standard"
+                        hideRequiredMarker="true">
           <mat-label>Vezéknév</mat-label>
-          <input id="firstName"
+          <input id="lastName"
                  matInput
                  type="text"
                  placeholder="pl.: Kiss"
+                 [formControl]="this.form.lastName"
           >
         </mat-form-field>
       </div>
       <!-- Keresztnév/lastName -->
-      <div class="form-input">
-        <mat-form-field class="example-full-width" appearance="standard">
+      <div class="form-input form-input-first-name">
+        <mat-form-field appearance="standard"
+                        hideRequiredMarker>
           <mat-label>Keresztnév</mat-label>
-          <input id="lastName"
+          <input id="firstName"
                  matInput
                  type="text"
                  placeholder="pl.: Tamás"
+                 [formControl]="this.form.firstName"
           >
         </mat-form-field>
       </div>
       <!-- email -->
-      <div class="form-input">
-        <mat-form-field class="example-full-width" appearance="standard">
+      <div class="form-input form-input-email">
+        <mat-form-field appearance="standard"
+                        hideRequiredMarker>
           <mat-label>E-mail cím</mat-label>
           <input id="email"
                  matInput
                  type="email"
                  placeholder="emailcimem@gmail.com"
+                 [formControl]="this.form.email"
           >
         </mat-form-field>
       </div>
       <!-- phoneNum -->
-      <div class="form-input">
-        <mat-form-field class="example-full-width" appearance="standard">
+      <div class="form-input form-input-phone-num">
+        <mat-form-field appearance="standard"
+                        hideRequiredMarker>
           <mat-label>Telefon szám</mat-label>
           <input id="phoneNum"
                  matInput
                  type="text"
                  placeholder="pl.: +36301234567"
-                 [required]="true"
+                 [formControl]="this.form.phoneNumber"
           >
         </mat-form-field>
       </div>
       <!-- password -->
-      <div class="form-input">
-        <mat-form-field class="example-full-width" appearance="standard">
+      <div class="form-input form-input-password">
+        <mat-form-field appearance="standard"
+                        hideRequiredMarker>
           <mat-label>Jelszó</mat-label>
           <input id="password"
                  matInput
                  type="password"
                  placeholder="minimum 6 karakter"
+                 [formControl]="this.form.password"
           >
         </mat-form-field>
       </div>
       <!-- password again -->
-      <div class="form-input">
-        <mat-form-field class="example-full-width" appearance="standard">
+      <div class="form-input form-input-password-again">
+        <mat-form-field appearance="standard"
+                        hideRequiredMarker>
           <mat-label>Jelszó ismét</mat-label>
           <input id="passwordAgain"
                  matInput
                  type="password"
                  placeholder="minimum 6 karakter"
+                 [formControl]="this.form.passwordAgain"
           >
         </mat-form-field>
       </div>
-    </div>
-    <div class="form-checkboxes">
-      <!-- checkboxes -->
-      <!-- ÁSZF -->
-      <mat-checkbox>Megértettem és elfogadom az ÁSZF-et</mat-checkbox>
-      <!-- GDPR -->
-      <mat-checkbox>Megértettem és elfogadom az Adatkezelési Tájékoztatót</mat-checkbox>
-      <!-- newsLetter -->
-      <mat-checkbox>Szeretnék hírlevelet kapni és értesülni a <strong>FOXPOST</strong> ajánlatairól.</mat-checkbox>
-      <!-- game -->
-      <mat-checkbox>Részt veszek a FOXPOST nyereményjátékaiban és elfogadom a Játék-, illetve Adatvédelmi
-        Szabályzatot.
-      </mat-checkbox>
     </div>
   </form>
 </div>

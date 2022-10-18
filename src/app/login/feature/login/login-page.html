@@ -20,7 +20,7 @@
                  matInput
                  type="email"
                  placeholder="E-mail cím"
-                 [formControl]="this.emailControl"
+                 [formControl]="this.form.controls.email"
           >
         </mat-form-field>
         <!-- password -->
@@ -33,7 +33,7 @@
                  matInput
                  type="password"
                  placeholder="Jelszó"
-                 [formControl]="this.passwordControl"
+                 [formControl]="this.form.controls.password"
           >
         </mat-form-field>
         <section class="actions">

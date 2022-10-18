@@ -10,7 +10,6 @@ export class BlogPage implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    console.log('blog')
   }
 
 }

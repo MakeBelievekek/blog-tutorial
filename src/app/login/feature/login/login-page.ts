@@ -1,19 +1,16 @@
-import {Component, OnInit} from '@angular/core';
-import {FormBuilder, FormControl, Validators} from "@angular/forms";
+import {Component} from '@angular/core';
+import {FormBuilder, Validators} from "@angular/forms";
 import {distinctUntilChanged, map, startWith} from "rxjs";
 import {AbstractAuthenticationService} from "../../../shared/data-acess/abstraction/abstract-authentication-service";
+import {FormState} from "../../../shared/models/form-state";
 
-enum FormState {
-  VALID = 'VALID',
-  INVALID = 'INVALID'
-}
 
 @Component({
   selector: 'app-login-page',
   templateUrl: './login-page.html',
   styleUrls: ['./login-page.scss']
 })
-export class LoginPage implements OnInit {
+export class LoginPage {
   form = this.fb.group(
     {
       email: ['', [Validators.required, Validators.email]],
@@ -24,38 +21,19 @@ export class LoginPage implements OnInit {
     }
   )
 
-  isValid = this.form.statusChanges.pipe(
-    startWith(FormState.INVALID),
-    distinctUntilChanged(),
-    map((status: string) => status === FormState.VALID)
-  )
 
   constructor(private fb: FormBuilder, private authService: AbstractAuthenticationService) {
-  }
-
-  ngOnInit(): void {
-    this.isValid.subscribe(console.log)
-  }
-
-  get emailControl(): FormControl {
-    return this.form.controls.email;
-  }
-
-  get passwordControl(): FormControl {
-    return this.form.controls.password;
   }
 
   onLogin(): void {
     this.form.markAllAsTouched();
     this.form.updateValueAndValidity();
 
-/*
-    if (this.form.invalid) {
-      return;
-    }
-*/
+    /*
+        if (this.form.invalid) {
+          return;
+        }
+    */
     this.authService.login()
-    console.log(this.form.valid);
-    console.log(this.form.getRawValue());
   }
 }

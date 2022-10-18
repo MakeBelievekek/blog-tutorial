@@ -6,8 +6,7 @@ import {AppComponent} from './app.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {ToolbarModule} from "./shared/ui/toolbar/toolbar.module";
 import {HttpClientModule} from "@angular/common/http";
-import {AbstractAuthenticationService} from "./shared/data-acess/abstraction/abstract-authentication-service";
-import {MockAuthenticationService} from "./shared/data-acess/mock-authentication.service";
+import {environment} from "../environments/environment";
 
 @NgModule({
   declarations: [
@@ -21,10 +20,7 @@ import {MockAuthenticationService} from "./shared/data-acess/mock-authentication
     ToolbarModule
   ],
   providers: [
-    {
-      provide: AbstractAuthenticationService,
-      useClass: MockAuthenticationService
-    }
+    ...environment.providers.appModule
   ],
   bootstrap: [AppComponent]
 })

@@ -27,9 +27,12 @@
         </div>
       </div>
     </section>
-    <app-register-form></app-register-form>
-    <div class="actions">
-      <button mat-flat-button color="primary">Regisztráció</button>
-    </div>
+    <form [formGroup]="this.formGroups" (submit)="this.onRegister()">
+      <app-register-form></app-register-form>
+      <app-opt-in-form></app-opt-in-form>
+      <div class="actions">
+        <button mat-flat-button color="primary">Regisztráció</button>
+      </div>
+    </form>
   </div>
 </div>

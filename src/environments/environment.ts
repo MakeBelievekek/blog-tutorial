@@ -2,8 +2,18 @@
 // `ng build` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
 
+import {AbstractAuthenticationService} from "../app/shared/data-acess/abstraction/abstract-authentication-service";
+import {MockAuthenticationService} from "../app/shared/data-acess/mock-authentication.service";
+
 export const environment = {
-  production: false
+  production: false,
+  providers: {
+    appModule: [
+    {
+      provide: AbstractAuthenticationService,
+      useClass: MockAuthenticationService
+    }
+  ]},
 };
 
 /*

@@ -10,7 +10,6 @@ export class HomePage implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    console.log('this is a msg from the right side');
   }
 
 }

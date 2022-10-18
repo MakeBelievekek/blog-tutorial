@@ -7,6 +7,7 @@ import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatInputModule} from "@angular/material/input";
 import {MatButtonModule} from "@angular/material/button";
 import {ReactiveFormsModule} from "@angular/forms";
+import {OptInFormModule} from "../../../register/shared/ui/opt-in-form/opt-in-form.module";
 
 
 @NgModule({
@@ -20,6 +21,7 @@ import {ReactiveFormsModule} from "@angular/forms";
     MatFormFieldModule,
     MatInputModule,
     MatButtonModule,
+    OptInFormModule,
     ReactiveFormsModule
   ]
 })
