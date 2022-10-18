@@ -1,0 +1,111 @@
+@import '../../../../styles/_variables.scss';
+
+.blog-page {
+  padding: 2rem;
+
+  h1 {
+    padding: 0;
+    margin: 0;
+    display: block;
+    text-transform: uppercase;
+    color: $primary-red;
+  }
+
+  .header {
+    display: flex;
+    padding-bottom: 3rem;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &-left, &-middle, &-right {
+      display: flex;
+      width: calc(100% / 3);
+    }
+
+    &-middle {
+      justify-content: center;
+    }
+
+    &-action-back {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  .title {
+    text-align: center;
+    padding-bottom: 2rem;
+
+    &-separator {
+      position: relative;
+      width: 40%;
+      height: 3px;
+
+      background-color: $primary-red;
+      left: 0;
+      right: 0;
+      margin: 3rem auto 2rem;
+    }
+
+
+  }
+
+  .blog-body {
+    padding-bottom: 2rem;
+
+    &-img {
+      padding-top: 2rem;
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  .blog-page {
+    padding: 4rem 10% 0;
+    position: relative;
+
+    .background-cover {
+      background-color: $primary-red;
+      position: absolute;
+      z-index: 0;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 400px;
+    }
+
+    .card {
+      background-color: $white;
+      position: relative;
+      width: min(100%, 900px);
+      left: 0;
+      right: 0;
+      margin: 0 auto 4rem;
+    }
+
+    .header {
+      padding-top: 2rem;
+
+      &-action-back {
+        padding-left: 1.5rem;
+      }
+    }
+  }
+  .blog-body {
+    &-img {
+      text-align: center;
+      padding-bottom: 2rem;
+
+      img {
+        max-width: 40rem;
+      }
+    }
+  }
+}

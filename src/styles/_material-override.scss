@@ -1,0 +1,281 @@
+// Angular Material Override styles
+
+.mat-tab-header {
+  border-bottom-width: 0;
+}
+.mat-tab-label {
+  border-width: 1px 1px 0 1px !important;
+  border-style: solid !important;
+  border-color: $grey11 !important;
+  padding: 0 24px 0 12px !important;
+  height: 38px !important;
+  min-width: 120px !important;
+  margin-right: 5px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  background-color: $grey9;
+}
+.mat-tab-label-active {
+  background-color: white !important;
+}
+.mat-tab-body-wrapper {
+  border: solid 1px $grey11;
+  padding: 15px;
+}
+
+.mat-slide-line {
+  .mat-slider {
+    .mat-slider-wrapper {
+      .mat-slider-track-wrapper {
+        .mat-slider-track-fill {
+          background-color: $darkblue !important;
+        }
+      }
+      .mat-slider-thumb-container {
+        .mat-slider-thumb {
+          background-color: $darkblue !important;
+        }
+      }
+      .mat-slider-thumb-label {
+        background-color: $darkblue !important;
+      }
+    }
+  }
+}
+
+.mat-expansion-panel.table-expansion-panel {
+  height: 100%;
+  box-shadow: none;
+
+  &.mat-expanded {
+    overflow: visible;
+  }
+
+  &:not([class*='mat-elevation-z']) {
+    box-shadow: none;
+  }
+
+  .mat-expansion-panel-header {
+    margin-bottom: 25px;
+    background: $grey7;
+
+    &:hover,
+    &:focus {
+      background: $grey7 !important;
+    }
+
+    &[aria-disabled='true'] {
+      color: $black;
+    }
+
+    .mat-content {
+      overflow: visible;
+    }
+
+    .mat-expansion-panel-header-title {
+      color: $black;
+      font-family: $BoschMedium;
+      font-size: 14px;
+
+      .inline-chip {
+        position: relative;
+
+        .icon {
+          position: absolute;
+          top: -4px;
+          right: -25px;
+          color: $black;
+          font-family: $BoschIcon;
+          font-size: 20px;
+
+          &:hover {
+            color: $lightblue;
+          }
+        }
+      }
+    }
+
+    .mat-expansion-panel-header-description {
+      position: relative;
+      margin-right: 0;
+
+      .description-inner {
+        position: absolute;
+        right: 5px;
+
+        > div {
+          margin-right: 10px;
+
+          &.button {
+            margin: -5px 0 0 0;
+          }
+        }
+
+        .tabs {
+          button {
+            padding: 0 10px;
+            background: transparent;
+            border: none;
+            border-right: 1px solid $grey4;
+            cursor: pointer;
+
+            &:hover,
+            &:focus {
+              outline: none;
+            }
+
+            &:last-child {
+              border-right-color: transparent;
+            }
+
+            &.active,
+            &:hover {
+              color: $darkblue;
+            }
+          }
+        }
+      }
+    }
+
+    .mat-expansion-indicator:after {
+      width: 15px;
+      height: 15px;
+      margin-bottom: 5px;
+      border-width: 0 1px 1px 0;
+    }
+
+    &.mat-expanded {
+      .mat-expansion-indicator:after {
+        margin-bottom: 15px;
+      }
+    }
+  }
+
+  .mat-expansion-panel-content {
+    height: calc(100% - 90px);
+
+    .mat-expansion-panel-body {
+      height: 100%;
+      padding: 0;
+    }
+  }
+}
+
+.mat-ink-bar {
+  background-color: initial !important;
+}
+
+.mat-form-field {
+  width: 100%;
+
+  input.mat-input-element,
+  mat-select.mat-select {
+    margin: 3px;
+    padding: 10px 5px 6px;
+    display: block;
+  }
+
+  &-appearance-legacy .mat-form-field-label,
+  &-button-group-label-wrapper,
+  &-label-wrapper {
+    padding-left: 5px;
+
+    label,
+    mat-label {
+      font-size: 1rem;
+      color: $black;
+      font-family: $BoschLight !important;
+    }
+  }
+
+  &-button-group {
+    padding-bottom: 15px;
+
+    &-label-wrapper {
+      padding-bottom: 10px;
+    }
+  }
+
+  &-disabled {
+    label,
+    mat-label {
+      color: $grey4 !important;
+    }
+  }
+
+  &-appearance-legacy {
+    .mat-form-field-subscript-wrapper {
+      margin-top: 0;
+    }
+  }
+
+  &-infix {
+    border-bottom: $grey7 solid 1px;
+  }
+}
+
+.mat-chip-list-wrapper {
+  position: relative;
+}
+
+.mat-select-panel-wrap {
+  padding: 0 13px 0 7px;
+  margin-top: 50px;
+
+  .mat-select-panel {
+    border-radius: 0;
+  }
+}
+
+.mat-error,
+.mat-hint {
+  font-family: $BoschLight;
+  margin: 5px;
+}
+
+.mat-autocomplete-panel {
+  margin-top: 20px; // not to overlay mat-hint messages
+
+  .mat-option {
+    font-size: inherit;
+    line-height: 3em;
+    height: 3em;
+  }
+}
+
+.mat-checkbox.mat-accent {
+  .mat-checkbox-inner-container {
+    height: 15px;
+    width: 15px;
+  }
+
+  .mat-checkbox-label {
+    font-family: $BoschMedium;
+  }
+
+  &:not(.mat-checkbox-disabled) {
+    .mat-checkbox-background,
+    .mat-checkbox-ripple .mat-ripple-element {
+      background-color: $grey20;
+    }
+
+    &.mat-checkbox-checked {
+      .mat-checkbox-background,
+      .mat-checkbox-ripple .mat-ripple-element {
+        background-color: $darkblue;
+      }
+    }
+  }
+
+  &.mat-checkbox-disabled {
+    .mat-checkbox-background,
+    .mat-checkbox-ripple .mat-ripple-element {
+      background-color: $grey19;
+    }
+  }
+}
+
+// material select
+.cdk-overlay-container {
+  z-index: 10000;
+}

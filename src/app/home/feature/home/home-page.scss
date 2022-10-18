@@ -1,6 +1,8 @@
+@import '../../../../styles/_variables.scss';
+
 h1, span, button {
   display: block;
-  font-family: sans-serif;
+  font-family: "OpenSans", sans-serif;
   font-weight: bolder;
 }
 
@@ -12,6 +14,7 @@ h1 {
   width: 100%;
   position: relative;
   padding-bottom: 8rem;
+  background-color: $background-main;
 
   &-background {
     position: relative;
@@ -39,10 +42,19 @@ h1 {
     display: flex;
     flex-direction: column;
     width: 90%;
+    background-color: $white;
 
     &-content {
-      background-color: grey;
       padding: 2em 2em;
+
+      h1 {
+        word-wrap: break-word;
+        font-size: 2.375rem;
+        font-weight: 800;
+        text-transform: uppercase;
+        line-height: 3rem;
+        color: $primary-red;
+      }
 
       h1, span {
         text-align: left;
@@ -51,10 +63,14 @@ h1 {
       button {
         width: 100%;
         padding: 0.2rem;
-        border: solid red 3px;
+      }
+
+      span {
+        font-weight: 700;
       }
 
       span, button {
+        font: 400 14px/20px Roboto, "Helvetica Neue", sans-serif;
         margin-top: 1.5em;
         font-size: 1rem;
       }
@@ -67,11 +83,18 @@ h1 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: antiquewhite;
   padding-top: 1rem;
   text-align: center;
+  background-color: $background-main;
+  padding-bottom: 2rem;
 
   h1 {
+    word-wrap: break-word;
+    font-size: 2.375rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    line-height: 3rem;
+    color: $primary-red;
     padding: 0 3rem 0 3rem;
   }
 
@@ -87,9 +110,11 @@ h1 {
 }
 
 .tracking {
-  background-color: azure;
   text-align: center;
-  padding: 1.5em 2em 0 2em;
+  padding-left: 2em;
+  padding-right: 2em;
+  //padding: 1.5em 2em 0 2em;
+  background-color: $background-main;
 
   input {
     -webkit-appearance: none;
@@ -100,6 +125,15 @@ h1 {
 
   span {
     margin-top: 1.5em;
+  }
+
+  h1 {
+    word-wrap: break-word;
+    font-size: 2.375rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    line-height: 3rem;
+    color: $primary-red;
   }
 
   input, button {
@@ -139,7 +173,16 @@ h1 {
 }
 
 .blog {
-  padding-top: 1.5em;
+  h1{
+    word-wrap: break-word;
+    font-size: 2.375rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    line-height: 3rem;
+    color: $primary-red;
+  }
+
+  background-color: $background-main;
 }
 
 @media only screen and (min-width: 600px) and (max-width: 1019px) {
@@ -159,7 +202,7 @@ h1 {
       height: auto;
       min-height: 375px;
       max-height: 500px;
-      background-color: magenta;
+      background-color: $primary-red;
       background-image: url("/assets/images/home_big.webp");
       //background-size: 100% 100%;
       //background-repeat: no-repeat;
@@ -189,7 +232,7 @@ h1 {
         display: block;
         width: 100%;
         height: calc(50% - 3px);
-        border-bottom: solid 6px magenta;
+        border-bottom: solid 6px $primary-red;
         position: absolute;
         top: 0;
         right: calc(100% + 1em);
@@ -257,7 +300,7 @@ h1 {
         display: block;
         width: 100%;
         height: calc(50% - 3px);
-        border-bottom: solid 6px magenta;
+        border-bottom: solid 6px $primary-red;
         position: absolute;
         top: 0;
         right: calc(100% + 1em);

@@ -15,8 +15,12 @@ const routes: Routes = [
     loadChildren: () => import('./register/feature/register-shell/register-shell.module').then((m) => m.RegisterShellModule),
   },
   {
+    path: 'blog',
+    loadChildren: () => import('./blog/feature/blog-shell/blog-shell.module').then((m) => m.BlogShellModule),
+  },
+  {
     path: '',
-    redirectTo:  '/home', pathMatch: 'full' ,
+    redirectTo: '/home', pathMatch: 'full',
   },
 ];
 

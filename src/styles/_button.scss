@@ -1,0 +1,196 @@
+//button styles
+button:focus {
+  outline: 0 !important;
+}
+
+.btn,
+.mat-button {
+  padding: 0.786em 1.071em; // 11px 15px
+}
+
+.btn,
+.mat-button,
+.mat-button-toggle {
+  font-family: $BoschLight;
+  font-size: 0.875rem; // 14px
+  line-height: 1em; // 14px
+  border-radius: 0 !important;
+  min-width: 6.428em !important; // 90px
+  height: 2.786em; // 39px
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+
+  & .mat-button-toggle-button {
+    padding: 0.786em 1.071em; // 11px 15px
+  }
+
+  & .mat-button-toggle-focus-overlay {
+    cursor: pointer;
+  }
+
+  &-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &-label-content {
+    padding: 0 !important;
+    line-height: inherit !important;
+  }
+
+  &:hover,
+  &-checked {
+    background-color: $grey18;
+    color: $black;
+  }
+
+  &:disabled,
+  &-disabled,
+  &[disabled],
+  &[disabled][disabled],
+  &.mat-accent[disabled],
+  &.mat-primary[disabled],
+  &.mat-warn[disabled] {
+    border: none !important;
+    background-color: $grey4 !important;
+    color: $grey3 !important;
+    opacity: 0.75;
+
+    &,
+    & .mat-button-toggle-focus-overlay {
+      cursor: not-allowed;
+    }
+  }
+
+  &.btn-info {
+    & {
+      border: 1px solid $lightblue20;
+      background-color: $lightblue20;
+      color: $lightblue;
+    }
+
+    &:active,
+    &:hover,
+    &.mat-button-toggle-checked {
+      border: 1px solid $lightblue50;
+      background-color: $lightblue50;
+    }
+  }
+
+  &.btn-success {
+    & {
+      border: 1px solid $lightgreen20;
+      background-color: $lightgreen20;
+      color: $lightgreen;
+    }
+
+    &:active,
+    &:hover,
+    &.mat-button-toggle-checked {
+      border: 1px solid $lightgreen50;
+      background-color: $lightgreen50;
+      color: $lightgreen;
+    }
+  }
+
+  &.btn-warning {
+    & {
+      border: 1px solid $amber20;
+      background-color: $amber20;
+      color: $amber;
+    }
+
+    &:active,
+    &:hover,
+    &.mat-button-toggle-checked {
+      border: 1px solid $amber50;
+      background-color: $amber50;
+      color: $amber;
+    }
+  }
+
+  &.btn-danger {
+    & {
+      border: 1px solid $red20;
+      background-color: $red20;
+      color: $red;
+    }
+
+    &:active,
+    &:hover,
+    &.mat-button-toggle-checked {
+      border: 1px solid $red50;
+      background-color: $red50;
+      color: $red;
+    }
+  }
+
+  &.btn-primary {
+    & {
+      border: 1px solid $darkblue;
+      background-color: $darkblue;
+      color: $white;
+    }
+
+    &:active,
+    &:hover,
+    &.mat-button-toggle-checked {
+      border: 1px solid $lightblue;
+      background-color: $lightblue;
+      color: $white;
+    }
+  }
+
+  &.btn-default {
+    float: left;
+    border: 1px solid $grey4;
+    background-color: $white;
+    color: $black;
+
+    &:active,
+    &:hover,
+    &.mat-button-toggle-checked {
+      background-color: $grey4;
+      color: $black;
+      opacity: 0.75;
+    }
+  }
+
+  .bosch-icon {
+    padding-right: 0.5rem;
+  }
+}
+
+.button-row {
+  display: flex;
+  justify-content: space-between;
+  margin-left: -0.5rem;
+  margin-right: -0.5rem;
+
+  button {
+    margin: 0 0.5rem;
+  }
+}
+
+.mat-button-toggle-group {
+  height: 40px;
+  border-radius: 0 !important;
+  border: none;
+
+  .mat-button-toggle {
+    &-appearance-standard {
+      border: 1px solid $grey4;
+      background-color: $white;
+      color: $black;
+    }
+  }
+}
+
+.btn-group {
+  .btn {
+    margin-right: 2px;
+  }
+}
