@@ -1,5 +1,4 @@
 @import '../../../../styles/_variables.scss';
-
 h1, span, button {
   display: block;
   font-family: "OpenSans", sans-serif;
@@ -202,7 +201,7 @@ h1 {
       height: auto;
       min-height: 375px;
       max-height: 500px;
-      background-color: $primary-red;
+      background-color: $background-main;
       background-image: url("/assets/images/home_big.webp");
       //background-size: 100% 100%;
       //background-repeat: no-repeat;

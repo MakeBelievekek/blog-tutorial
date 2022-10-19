@@ -1,0 +1,84 @@
+@import "../../../../styles/variables";
+:host {
+}
+
+.fox-spinner {
+  --primary-bg: magenta;
+  --clock-color: royalblue;
+  --custom-bg: red;
+
+  position: fixed;
+  top: calc(50% - 29px);
+  left: calc(50% - 29px);
+  z-index: 1111111111111111111111111111111111111;
+
+
+  &::before {
+    top: 0;
+    left: 0;
+
+    content: '';
+    position: fixed;
+    background-color: grey;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    opacity: 0.5;
+  }
+
+  .background {
+    position: fixed;
+    background-color: rgba(255, 255, 255, 0.7);
+    z-index: 9999;
+    opacity: 0.5;
+  }
+
+  .wrapper {
+    position: fixed;
+  }
+
+  .spinner-circle {
+    position: relative;
+
+    z-index: 10000;
+    display: inline-block;
+    transform: translateZ(1px);
+  }
+
+  @keyframes spinner-circle {
+    0%, 100% {
+      animation-timing-function: cubic-bezier(0.5, 0, 1, 0.5);
+    }
+    0% {
+      transform: rotateY(0deg);
+    }
+    50% {
+      transform: rotateY(1800deg);
+      animation-timing-function: cubic-bezier(0, 0.5, 0.5, 1);
+    }
+    100% {
+      transform: rotateY(3600deg);
+    }
+  }
+
+  .spinner-body {
+    display: inline-block;
+    width: 58px;
+    height: 58px;
+    background-color: var(--primary-bg);
+    background-image: url("/assets/images/fox.png");
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 50%;
+    animation: spinner-circle 10s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 7px
+    }
+  }
+}
+
+

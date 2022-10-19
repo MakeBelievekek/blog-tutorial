@@ -7,6 +7,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {ToolbarModule} from "./shared/ui/toolbar/toolbar.module";
 import {HttpClientModule} from "@angular/common/http";
 import {environment} from "../environments/environment";
+import {FoxSpinnerModule} from "./shared/ui/fox-spinner/fox-spinner.module";
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import {environment} from "../environments/environment";
     BrowserAnimationsModule,
     BrowserModule,
     HttpClientModule,
-    ToolbarModule
+    ToolbarModule,
+    FoxSpinnerModule
   ],
   providers: [
     ...environment.providers.appModule
