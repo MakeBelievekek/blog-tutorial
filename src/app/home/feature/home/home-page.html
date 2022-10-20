@@ -22,32 +22,36 @@
       <div class="header-decoration"></div>
       <h1>BLOG-ÖTLETELÉS</h1>
     </div>
-  <div class="tracking-container">
-    <span>Írd be a blog ötletedet és mi pedig megmutatjuk, lesze belőle valaha valami!</span>
-    <div class="tracking-lookup">
-      <input type="text" placeholder="Jó ötlet...vagy">
-      <button mat-flat-button color="primary">Megnézem</button>
-    </div>
-    <span class="font-w-normal">
+    <div class="tracking-container">
+      <div class="tracking-container-left">
+        <span>Írd be a blog ötletedet és mi pedig megmutatjuk, lesze belőle valaha valami!</span>
+        <div class="tracking-lookup">
+          <input #idea type="text" placeholder="Jó ötlet...vagy">
+          <button mat-flat-button color="primary" (click)="this.onPeak(idea.value)">Megnézem</button>
+        </div>
+        <span class="font-w-normal">
     Ha automatába adtad fel, a CLFOX betűkkel kezdődő csomagazonosítót írd ide!
     Vagy ha házhoz szállítást választottad, az 50139-cel kezdődő számsor a csomagazonosítód.
   </span>
-    <div class="tracking-help">
+        <div class="tracking-help">
    <span>
     Hol találom a kódomat?
    </span>
-      <span>
+          <span>
     Segítségre van szükséged?
    </span>
+        </div>
+      </div>
+      <div class="animated-bit">
+        <app-animated></app-animated>
+      </div>
     </div>
-  </div>
-  </div>
-  <div class="animated-bit">
-    <app-animated></app-animated>
+
   </div>
 </section>
 <section id="blog" class="blog">
   <div class="blog-header">
+    <div class="header-decoration"></div>
     <h1>BLOG</h1>
   </div>
   <div class="blog-items">

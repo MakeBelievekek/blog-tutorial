@@ -1,0 +1,34 @@
+@import "src/styles/mixins";
+
+:host {
+  @include set-text-block;
+  @include set-text;
+}
+
+.confirm-dialog {
+  width: 300px;
+
+  .title {
+    text-transform: uppercase;
+  }
+
+  .divider {
+    margin: 1rem auto;
+    background-color: var(--primary-red);
+    width: 90%;
+    height: 3px;
+  }
+
+  .action {
+    margin-top: 1rem;
+    text-align: center;
+
+    button {
+      @include button-primary-big;
+      text-transform: uppercase;
+      width: 80%;
+    }
+  }
+
+
+}

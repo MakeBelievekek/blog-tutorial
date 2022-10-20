@@ -1,0 +1,13 @@
+<div class="confirm-dialog">
+  <div class="title">
+    <h1>{{this.data.title}}</h1>
+  </div>
+  <div class="divider"></div>
+  <div class="content">
+    <div><h3>{{this.data.statement}}</h3></div>
+  </div>
+  <div class="divider"></div>
+  <div class="action">
+    <button mat-flat-button color="primary" (click)="this.dialogRef.close()">{{this.data.confirmButtonText}}</button>
+  </div>
+</div>

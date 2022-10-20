@@ -123,6 +123,6 @@ export class MockBlogPostService implements AbstractBlogPostService {
     const {comments} = blogPost;
     blogPost.comments = Array.isArray(comments) ? [...comments, createdCommit] : [createdCommit]
 
-    return of({content: createdCommit}).pipe(delay(3000))
+    return of({content: createdCommit}).pipe(delay(500))
   }
 }
