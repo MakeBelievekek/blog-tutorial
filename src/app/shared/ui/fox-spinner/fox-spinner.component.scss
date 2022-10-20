@@ -1,16 +1,10 @@
-@import "../../../../styles/variables";
-:host {
-}
+
 
 .fox-spinner {
-  --primary-bg: magenta;
-  --clock-color: royalblue;
-  --custom-bg: red;
-
   position: fixed;
   top: calc(50% - 29px);
   left: calc(50% - 29px);
-  z-index: 1111111111111111111111111111111111111;
+  z-index: 9999;
 
 
   &::before {
@@ -65,13 +59,13 @@
     display: inline-block;
     width: 58px;
     height: 58px;
-    background-color: var(--primary-bg);
+    background-color: var(--primary-red);
     background-image: url("/assets/images/fox.png");
     background-size: auto;
     background-repeat: no-repeat;
     background-position: center;
     border-radius: 50%;
-    animation: spinner-circle 10s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+    animation: spinner-circle 15s cubic-bezier(0, 0.2, 0.8, 1) infinite;
 
     img {
       position: absolute;

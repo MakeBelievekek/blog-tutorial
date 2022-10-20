@@ -1,14 +1,20 @@
-@import '../../../../styles/_variables.scss';
+@import "src/styles/mixins";
 
+:host {
+  @include set-text-block;
+  @include set-text;
+}
 .blog-page {
+
   padding: 2rem;
+  background-color: var(--primary-bg);
 
   h1 {
     padding: 0;
     margin: 0;
     display: block;
     text-transform: uppercase;
-    color: $primary-red;
+    color: var(--primary-red);
   }
 
   .header {
@@ -43,7 +49,7 @@
       width: 40%;
       height: 3px;
 
-      background-color: $primary-red;
+      background-color: var(--primary-red);
       left: 0;
       right: 0;
       margin: 3rem auto 2rem;
@@ -64,29 +70,56 @@
       }
     }
   }
+
+  .comments {
+    width: 90%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .comments-title {
+    align-self: flex-start;
+  }
+
+  .comments-list {
+
+  }
+
+  .comment-creation {
+    width: 100%;
+  }
 }
 
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 1020px) {
   .blog-page {
     padding: 4rem 10% 0;
     position: relative;
 
     .background-cover {
-      background-color: $primary-red;
+      background-color: var(--primary-red);
       position: absolute;
       z-index: 0;
       top: 0;
       left: 0;
       width: 100vw;
-      height: 400px;
+      height: 350px;
     }
 
     .card {
-      background-color: $white;
+      @include border-radius-medium;
+      @include strong-box-shadow-around;
+
+      background-color: var(--primary-white);
       position: relative;
       width: min(100%, 900px);
       left: 0;
       right: 0;
+      padding: 2rem;
       margin: 0 auto 4rem;
     }
 
@@ -97,15 +130,27 @@
         padding-left: 1.5rem;
       }
     }
-  }
-  .blog-body {
-    &-img {
-      text-align: center;
-      padding-bottom: 2rem;
 
-      img {
-        max-width: 40rem;
+    .blog-body {
+      &-img {
+        text-align: center;
+        padding-bottom: 2rem;
+
+        img {
+          max-width: 40rem;
+        }
       }
+    }
+
+    .comments {
+      width: 55rem;
+    }
+
+    .comments-title {
+    }
+
+    .comments-list {
     }
   }
 }
+

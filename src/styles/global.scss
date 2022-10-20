@@ -1,11 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
-@import 'src/styles/variables';
-@import './font';
-@import './fontfamily';
-@import './layout';
-@import './vendor';
-@import './material-override';
+@forward 'src/styles/buttons';
+
 
 // ToDo must be extracted in shared components styles
-@import './button';
-@import './form';

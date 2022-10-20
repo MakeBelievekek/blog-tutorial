@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-toolbar',
@@ -8,7 +9,7 @@ import {Component, OnInit} from '@angular/core';
 export class ToolbarComponent implements OnInit {
   open = false;
 
-  constructor() {
+  constructor(private router: Router,) {
   }
 
   ngOnInit(): void {
@@ -20,5 +21,13 @@ export class ToolbarComponent implements OnInit {
 
   onClose(): void {
     this.open = false;
+  }
+
+  onLogin() {
+    this.router.navigate(['../login']).then(_ => this.onClose());
+  }
+
+  onRegistration() {
+    this.router.navigate(['../register']).then(_ => this.onClose());
   }
 }

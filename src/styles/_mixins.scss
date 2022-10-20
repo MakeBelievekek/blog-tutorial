@@ -1,0 +1,70 @@
+@mixin set-text {
+  h1, h3, span, p {
+    font-family: var(--font-style);
+    font-size: var(--font-size-medium);
+    line-height: var(--line-height-medium);
+    word-wrap: break-word;
+  }
+
+  span, p {
+    font-weight: var(--font-weight-400);
+
+  }
+
+  h1 {
+    font-weight: var(--font-weight-800);
+    color: var(--primary-red);
+  }
+}
+
+@mixin set-text-block {
+  h1, p, span, h3 {
+    display: block;
+  }
+}
+
+@mixin strong-box-shadow-btm {
+  box-shadow: 1px 11px 12px -1px rgba(186, 182, 182, 0.89);
+  -webkit-box-shadow: 1px 11px 12px -1px rgba(186, 182, 182, 0.89);
+  -moz-box-shadow: 1px 11px 12px -1px rgba(186, 182, 182, 0.89);
+}
+
+@mixin strong-box-shadow-around {
+  box-shadow: 1px 1px 30px 4px rgba(186, 182, 182, 0.1);
+  -webkit-box-shadow: 1px 1px 30px 4px rgba(186, 182, 182, 0.89);
+  -moz-box-shadow: 1px 1px 30px 4px rgba(186, 182, 182, 0.89);
+}
+
+@mixin box-shadow-unset {
+  box-shadow: unset;
+  -webkit-box-shadow: unset;
+  -moz-box-shadow: unset;
+}
+
+@mixin border-radius-medium {
+  border-radius: 0.5rem;
+}
+
+@mixin border-radius-small {
+  border-radius: 0.25rem;
+}
+
+@mixin button-primary-big {
+  background-color: var(--primary-red);
+  font-weight: var(--font-weight-700);
+  font-size: var(--font-size-medium);
+  line-height: 3rem;
+  text-transform: uppercase;
+  @include border-radius-small;
+}
+
+@mixin button-flat-big {
+  border: 2px solid var(--primary-red);
+  font-weight: var(--font-weight-700);
+  font-size: var(--font-size-medium);
+  background-color: var(--primary-white);
+  line-height: 3rem;
+  text-transform: uppercase;
+  color: var(--primary-red);
+  @include border-radius-small;
+}

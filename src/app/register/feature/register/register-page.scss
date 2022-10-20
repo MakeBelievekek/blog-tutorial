@@ -1,36 +1,23 @@
-@import '../../../../styles/_variables.scss';
+@import 'src/styles/mixins';
 
 .registration-page {
   padding: 0 2rem 2rem 2rem;
   position: relative;
   overflow-x: hidden;
 
-  h1, span {
-    display: block;
-    font-family: sans-serif;
-  }
-
-  h1 {
-    font-size: 1.75rem;
-    font-weight: bolder;
-  }
-
-  span {
-    font-size: 1.5rem;
-  }
+  @include set-text;
+  @include set-text-block;
 
   .greetings {
     padding-top: 2rem;
     text-align: center;
 
     h1 {
-      margin: 0;
-      word-wrap: break-word;
       font-size: 2.375rem;
       font-weight: 800;
       text-transform: uppercase;
       line-height: 3rem;
-      color: $primary-red;
+      color: var(--primary-red);
     }
 
     &-question {
@@ -67,9 +54,14 @@
   }
 
   .actions {
-    padding-top: 2rem;
+    padding-top: 4rem;
     padding-bottom: 2rem;
     text-align: center;
+
+    button {
+      width: 15rem;
+      @include button-primary-big;
+    }
   }
 }
 
@@ -77,10 +69,10 @@
   .registration-page {
     padding-top: 50px;
     overflow-x: hidden;
-    background-color: antiquewhite;
+    background-color: var(--primary-bg);
 
     .background-cover {
-      background-color: $primary-red;
+      background-color: var(--primary-red);
       position: absolute;
       z-index: 0;
       top: 0;
@@ -104,7 +96,7 @@
             position: absolute;
             top: calc(50% - 3px);
             left: 80%;
-            background-color: $primary-red;
+            background-color: var(--primary-red);
           }
         }
       }
@@ -114,7 +106,9 @@
       position: relative;
       margin: 0 auto 0;
       width: 900px;
-      background-color: white;
+      background-color: var(--primary-white);
+      @include strong-box-shadow-around;
+      @include border-radius-medium;
     }
   }
 }

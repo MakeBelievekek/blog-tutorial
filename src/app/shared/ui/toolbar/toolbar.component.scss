@@ -3,15 +3,18 @@
   justify-content: space-between;
   position: relative;
   flex-wrap: wrap;
-  //padding: 0 5rem 0 0;
 
-  height: 60px;
+  height: var(--nav-bar-hegiht);
   width: 100%;
 
   .logo {
-    width: 60px;
-    background-color: red;
-    height: 60px;
+    width: var(--nav-bar-hegiht);
+    height: var(--nav-bar-hegiht);
+    background-color: var(--primary-red);
+    background-image: url("/assets/svgs/toolbar.svg");
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
   }
 
   .burger-menu {
@@ -24,8 +27,12 @@
 
     mat-icon {
       transform: scale(1.5);
-      color: red;
+      color: var(--primary-red);
     }
+  }
+
+  .menu {
+    display: none;
   }
 
   .big {
@@ -35,11 +42,9 @@
     height: 100vh;
     overflow-x: hidden;
     overflow-y: scroll;
-    background-color: white;
+    background-color: var(--primary-white);
     z-index: 9999;
 
-    .menu {
-    }
 
     .menu-item {
       width: 100%;
@@ -49,7 +54,7 @@
   }
 }
 
-@media only screen and (min-width: 600px) and (max-width: 1019px) {
+@media only screen and (min-width: 600px) {
   .nav-bar {
     .logo {
     }
@@ -59,7 +64,6 @@
     }
 
     .menu {
-      outline: magenta 1px solid;
       display: flex;
       gap: 1rem;
       height: 100%;
@@ -69,6 +73,7 @@
     }
 
     .menu-item {
+      cursor: pointer;
       padding: 0;
     }
   }

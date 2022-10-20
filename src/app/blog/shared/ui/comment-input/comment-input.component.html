@@ -1,0 +1,19 @@
+<div class="comment-input">
+  <div class="comment-input-textarea">
+    <mat-form-field [style.fontSize]="'16px'" appearance="legacy" hideRequiredMarker="true">
+      <mat-label>Kommentelés</mat-label>
+      <textarea matInput
+                (focus)="onCommentTextAreaFocus()"
+                cdkTextareaAutosize
+                #autosize="cdkTextareaAutosize"
+                cdkAutosizeMinRows="1"
+                cdkAutosizeMaxRows="5"
+                [formControl]="this.form.controls.comment"
+      ></textarea>
+    </mat-form-field>
+  </div>
+  <div class="comment-input-actions">
+    <button (click)="this.form.reset()">Mégsem</button>
+    <button (click)="onComment()">Komment</button>
+  </div>
+</div>

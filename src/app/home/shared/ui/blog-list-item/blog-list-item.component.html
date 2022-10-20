@@ -1,0 +1,19 @@
+<div class="blog-list-item" (click)="this.selectedBlogPost.emit(this.blogPost)">
+  <div class="blog-card card-radius box-shadow">
+    <div class="blog-card-body">
+      <div class="blog-card-img"></div>
+      <div class="blog-card-content">
+        <div class="blog-card-title">
+          <h3>{{this.blogPost.title}}</h3>
+        </div>
+        <div class="bolg-card-desc">
+          {{this.blogPost.description}}
+        </div>
+        <div class="blog-card-footer">
+          <div class="blog-card-footer-date">{{this.blogPost.createdOn}}</div>
+          <div class="blog-card-footer-button"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

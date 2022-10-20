@@ -1,0 +1,21 @@
+.yes-no-dialog {
+  max-width: 450px;
+  padding: 3rem 0;
+
+  .question {
+    text-align: center;
+    padding-bottom: 1rem;
+  }
+
+  .actions {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    //outline: magenta 1px solid;
+
+    &-accept, &-reject {
+      width: 100px;
+    }
+  }
+
+}

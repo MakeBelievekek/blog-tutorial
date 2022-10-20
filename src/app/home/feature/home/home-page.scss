@@ -1,19 +1,15 @@
-@import '../../../../styles/_variables.scss';
-h1, span, button {
-  display: block;
-  font-family: "OpenSans", sans-serif;
-  font-weight: bolder;
-}
+@import "src/styles/mixins";
 
-h1 {
-  font-size: 1.75rem;
+:host {
+  @include set-text-block;
+  @include set-text;
 }
 
 .landing {
   width: 100%;
   position: relative;
   padding-bottom: 8rem;
-  background-color: $background-main;
+  background-color: var(--primary-bg);
 
   &-background {
     position: relative;
@@ -41,18 +37,20 @@ h1 {
     display: flex;
     flex-direction: column;
     width: 90%;
-    background-color: $white;
+    background-color: var(--primary-white);
+    @include border-radius-medium;
+    @include strong-box-shadow-around;
 
     &-content {
       padding: 2em 2em;
 
       h1 {
         word-wrap: break-word;
-        font-size: 2.375rem;
-        font-weight: 800;
+        font-size: var(--font-size-large);
+        font-weight: var(--font-weight-800);
         text-transform: uppercase;
-        line-height: 3rem;
-        color: $primary-red;
+        line-height: var(--line-height-large);
+        color: var(--primary-red);
       }
 
       h1, span {
@@ -61,15 +59,14 @@ h1 {
 
       button {
         width: 100%;
-        padding: 0.2rem;
+        margin-top: 2rem;
+        @include button-flat-big;
+        line-height: 2rem;
       }
 
       span {
+        font: var(--font);
         font-weight: 700;
-      }
-
-      span, button {
-        font: 400 14px/20px Roboto, "Helvetica Neue", sans-serif;
         margin-top: 1.5em;
         font-size: 1rem;
       }
@@ -82,10 +79,9 @@ h1 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 1rem;
+  padding: 3rem;
   text-align: center;
-  background-color: $background-main;
-  padding-bottom: 2rem;
+  background-color: var(--primary-bg);
 
   h1 {
     word-wrap: break-word;
@@ -93,7 +89,7 @@ h1 {
     font-weight: 800;
     text-transform: uppercase;
     line-height: 3rem;
-    color: $primary-red;
+    color: var(--primary-red);
     padding: 0 3rem 0 3rem;
   }
 
@@ -109,11 +105,16 @@ h1 {
 }
 
 .tracking {
-  text-align: center;
-  padding-left: 2em;
-  padding-right: 2em;
-  //padding: 1.5em 2em 0 2em;
-  background-color: $background-main;
+  padding: 2rem 2rem;
+  background-color: var(--primary-bg);
+
+  .tracking-container {
+    text-align: center;
+  }
+
+  .animated-bit {
+    display: none;
+  }
 
   input {
     -webkit-appearance: none;
@@ -122,17 +123,8 @@ h1 {
     padding: 1em;
   }
 
-  span {
-    margin-top: 1.5em;
-  }
-
-  h1 {
-    word-wrap: break-word;
-    font-size: 2.375rem;
-    font-weight: 800;
-    text-transform: uppercase;
-    line-height: 3rem;
-    color: $primary-red;
+  button {
+    background-color: var(--primary-red);
   }
 
   input, button {
@@ -141,6 +133,21 @@ h1 {
     font-size: 1.1rem;
     font-weight: normal;
   }
+
+  span {
+    margin-top: 1.5em;
+  }
+
+  h1 {
+    text-align: center;
+    word-wrap: break-word;
+    font-size: 2.375rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    line-height: 3rem;
+    color: var(--primary-red);
+  }
+
 
   &-lookup {
     margin-top: 1em;
@@ -172,16 +179,53 @@ h1 {
 }
 
 .blog {
-  h1{
-    word-wrap: break-word;
-    font-size: 2.375rem;
-    font-weight: 800;
+  padding: 2rem 0;
+
+  h1 {
+    text-align: center;
+    font-size: var(--font-size-large);
+    font-weight: var(--font-weight-800);
     text-transform: uppercase;
-    line-height: 3rem;
-    color: $primary-red;
+    line-height: var(--line-height-large);
+    color: var(--primary-red);
   }
 
-  background-color: $background-main;
+  background-color: var(--primary-bg);
+
+  .blog-header {
+
+  }
+
+  .blog-items {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+    .blog-card {
+      cursor: pointer;
+      height: 455px;
+      width: 320px;
+      margin: 1rem 1em;
+
+      background-color: white;
+      --img-url: url('/assets/images/home_small.webp');
+      --color: red;
+
+      &-img {
+        background-color: var(--color);
+        height: 150px;
+        background-image: var(--img-url);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center top;
+      }
+
+    }
+
+    .blog-card-content {
+      padding: 0 3em 0 3em;
+    }
+  }
 }
 
 @media only screen and (min-width: 600px) and (max-width: 1019px) {
@@ -201,7 +245,7 @@ h1 {
       height: auto;
       min-height: 375px;
       max-height: 500px;
-      background-color: $background-main;
+      background-color: var(--primary-bg);
       background-image: url("/assets/images/home_big.webp");
       //background-size: 100% 100%;
       //background-repeat: no-repeat;
@@ -219,23 +263,46 @@ h1 {
   }
 
   .tracking {
-    text-align: left;
-    padding: 1.5em 2em 0 8em;
+
+    outline: magenta 1px solid;
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
     overflow: hidden;
 
-    h1 {
-      position: relative;
+    .tracking-container {
+      max-width: 800px;
+    }
 
-      &:first-of-type:after {
-        content: '';
-        display: block;
-        width: 100%;
-        height: calc(50% - 3px);
-        border-bottom: solid 6px $primary-red;
-        position: absolute;
-        top: 0;
-        right: calc(100% + 1em);
-      }
+    .animated-bit {
+      width: 600px;
+      display: block;
+      margin-top: 5rem;
+      margin-left: 4rem;
+    }
+
+    .header-container {
+      outline: magenta 1px solid;
+      min-width: 600px;
+      display: flex;
+      width: 100%;
+
+
+    }
+    .header-decoration {
+      width: 15%;
+      height: 1.8rem;
+      border-bottom: var(--primary-red) solid 6px;
+    }
+
+    h1 {
+      outline: magenta 1px solid;
+      text-align: unset;
+      position: relative;
+      width: 80%;
+      max-width: 1200px;
+      margin-left: auto;
+      height: 3rem;
     }
 
     input {
@@ -246,7 +313,7 @@ h1 {
     }
 
     span {
-      width: 50%;
+      width: 100%;
       margin-top: 1.5em;
       font-size: 1.3rem;
       font-weight: bold;
@@ -262,13 +329,13 @@ h1 {
 
     &-lookup {
       padding-top: 0.3rem;
-      width: 50%;
+      width: 100%;
       justify-content: flex-start;
     }
 
     &-help {
       justify-content: space-between;
-      width: 50%;
+      width: 100%;
 
       span {
         font-size: 1rem;
@@ -287,24 +354,31 @@ h1 {
   }
 
   .blog {
-    text-align: left;
     padding: 1.5em 2em 0 8em;
     overflow: hidden;
 
+
+    .blog-header {
+      width: 100%;
+    }
+
     h1 {
+      text-align: left;
       position: relative;
 
       &:first-of-type:after {
         content: '';
         display: block;
         width: 100%;
-        height: calc(50% - 3px);
-        border-bottom: solid 6px $primary-red;
+        height: 50%;
+        border-bottom: solid 6px var(--primary-red);
         position: absolute;
         top: 0;
         right: calc(100% + 1em);
       }
     }
+
+
   }
 }
 

@@ -1,3 +1,5 @@
+//$FontPathOpenSans: "../fonts/open-sans";
+//@import '../../node_modules/open-sans-fonts/open-sans.scss';
 // base colors
 //$grey1: #525f6b;
 $background-main: #f2f2f2;
@@ -5,6 +7,32 @@ $grey11: #eeeeee;
 $primary-red: #b70100;
 $white: #ffffff;
 
+:root {
+  --primary-bg: #f2f2f2;
+  --primary-red: #b70100;
+  --primary-white: white;
+  --primary-gray: #eeeeee;
+  --font: 400 14px/20px  "OpenSans", sans-serif;
+
+  --font-style: "OpenSans", sans-serif;
+  //h1
+  --font-size-large: 2.375rem;
+  --line-height-large: 2.875rem;
+  --font-weight-400: 400;
+  --font-weight-700: 700;
+  --font-weight-800: 800;
+
+  --word-wrap: break-word;
+
+  //button
+  --font-medium: 1000 1rem/1.75rem  "OpenSans", sans-serif;
+  --line-height-medium: 2rem;
+  --font-size-medium: 1.25rem;
+
+  --large-card-border: 1px solid rgba(0, 0, 0, 0.125);
+  --large-card-medium-border-radius: 1px solid rgba(0, 0, 0, 0.125);
+  --nav-bar-hegiht: 80px;
+}
 .box-shadow{
   border: 1px solid rgba(0, 0, 0, 0.125);
 }

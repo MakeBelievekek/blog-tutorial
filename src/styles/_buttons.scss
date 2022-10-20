@@ -1,0 +1,13 @@
+.btn-primary {
+  color: var(--primary-red);
+  background-color: var(--primary-white);
+  border: 2px var(--primary-red) solid;
+  font-family: var(--font-style);
+  font-weight: bolder;
+}
+
+.btn-flat {
+  background-color: var(--primary-red);
+  border: 1px var(--primary-red) solid;
+  color: var(--primary-white)
+}

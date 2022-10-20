@@ -1,0 +1,46 @@
+@import "src/styles/mixins";
+
+:host {
+  --img-url: url('/assets/images/home_small.webp');
+}
+
+.blog-card {
+  text-align: left;
+  word-wrap: break-word;
+  cursor: pointer;
+  height: 455px;
+  width: 320px;
+  margin: 1rem 1em;
+  background-color: var(--primary-white);
+  @include border-radius-medium;
+  box-shadow: 0 10px 20px rgb(0 0 0 / 10%);
+
+  h3 {
+    font-size: var(--font-size-medium);
+  }
+
+  &-content {
+    padding: 1.5rem;
+  }
+
+  &-img {
+    background-color: var(--primary-bg);
+    height: 150px;
+    background-image: var(--img-url);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top;
+  }
+
+  &-footer{
+    margin-top: 4rem;
+  }
+
+}
+
+@media only screen and (min-width: 1020px) {
+  .blog-card {
+    &-img {
+    }
+  }
+}

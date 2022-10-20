@@ -18,44 +18,38 @@
     </section>
     <section class="title">
       <div class="title-main">
-        <h1>Ha itt a vége, fuss el véle... A FOXPOST-hoz!</h1>
+        <h1>{{(this.blogPost$ | async)?.title}}</h1>
       </div>
       <div class="title-separator"></div>
       <div class="title-secondary">
-        <p>Jó állapotú, de már nem használt mesekönyveiteket ajándékozzátok oda egy rászoruló kisgyereknek, hogy most
-          valaki másnál kezdődhessen a mese! </p>
+        <p>{{(this.blogPost$ | async)?.description}} </p>
       </div>
     </section>
   </div>
+
+
   <section class="blog-body">
     <div class="blog-body-img">
       <img src="/assets/images/blog_1_small.jpg" alt="">
     </div>
     <div class="blog-body-content">
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur omnis placeat quibusdam soluta, tempora
-      ullam.
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur omnis placeat quibusdam soluta, tempora
-      ullam.
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur omnis placeat quibusdam soluta, tempora
-      ullam.
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur omnis placeat quibusdam soluta, tempora
-      ullam.
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur omnis placeat quibusdam soluta, tempora
-      ullam.
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur omnis placeat quibusdam soluta, tempora
-      ullam.
+      {{(this.blogPost$ | async)?.body}}
     </div>
     <div class="blog-body-socials"><strong>socials</strong></div>
   </section>
   <section class="comments">
-    <div>Kommentek</div>
-    <div class="comments-list">
-      <div style="width: 100%; height: 75px; background-color: #008ecf"></div>
-      <div style="width: 100%; height: 75px; background-color: #28a745"></div>
-      <div style="width: 100%; height: 75px; background-color: #286396"></div>
+    <div class="comments-title">Kommentek:</div>
+    <div class="comment-creation">
+      <app-comment-input [loggedIn]="this.isLoggedIn$ | async"
+                         (notLoggedIn)="this.noRightToCommit()"
+                         (commentEntered)="onComment($event)"
+      ></app-comment-input>
     </div>
-    <div class="comment-actions">
-      <button>add comment</button>
+    <div class="comments-list">
+      <ng-container *ngFor="let comment of (this.comments$ | async)">
+        <app-comment [comment]="comment"></app-comment>
+      </ng-container>
     </div>
   </section>
 </div>
+

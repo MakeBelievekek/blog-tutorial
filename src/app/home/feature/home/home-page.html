@@ -4,7 +4,8 @@
     <div class="card-content">
       <h1>A BLOGOLÁS MÉG SOHA NEM VOLT ILYEN EGYSZERŰ!</h1>
       <span>Blogküldés országosan automatákba vagy házhoz szállítással.</span>
-      <button mat-stroked-button color="primary" [routerLink]="['../register']">REGISZTRÁCIÓ</button>
+      <!--      <button mat-stroked-button color="primary" [routerLink]="['../register']">REGISZTRÁCIÓ</button>-->
+      <button [routerLink]="['../register']">REGISZTRÁCIÓ</button>
     </div>
   </div>
 </section>
@@ -16,25 +17,44 @@
   </div>
 </section>
 <section id="tracking" class="tracking">
-  <h1>BLOG-ÖTLETELÉS</h1>
-  <span>Írd be a blog ötletedet és mi pedig megmutatjuk, lesze belőle valaha valami!</span>
-  <div class="tracking-lookup">
-    <input type="text" placeholder="Jó ötlet...vagy">
-    <button mat-flat-button color="primary">Megnézem</button>
-  </div>
-  <span class="font-w-normal">
+  <div>
+    <div class="header-container">
+      <div class="header-decoration"></div>
+      <h1>BLOG-ÖTLETELÉS</h1>
+    </div>
+  <div class="tracking-container">
+    <span>Írd be a blog ötletedet és mi pedig megmutatjuk, lesze belőle valaha valami!</span>
+    <div class="tracking-lookup">
+      <input type="text" placeholder="Jó ötlet...vagy">
+      <button mat-flat-button color="primary">Megnézem</button>
+    </div>
+    <span class="font-w-normal">
     Ha automatába adtad fel, a CLFOX betűkkel kezdődő csomagazonosítót írd ide!
     Vagy ha házhoz szállítást választottad, az 50139-cel kezdődő számsor a csomagazonosítód.
   </span>
-  <div class="tracking-help">
+    <div class="tracking-help">
    <span>
     Hol találom a kódomat?
    </span>
-    <span>
+      <span>
     Segítségre van szükséged?
    </span>
+    </div>
+  </div>
+  </div>
+  <div class="animated-bit">
+    <app-animated></app-animated>
   </div>
 </section>
 <section id="blog" class="blog">
-  <h1>BLOG</h1>
+  <div class="blog-header">
+    <h1>BLOG</h1>
+  </div>
+  <div class="blog-items">
+    <ng-container *ngFor="let bolgPost of (this.blogPosts$ | async )">
+      <app-blog-list-item [blogPost]="bolgPost"
+                          (selectedBlogPost)="this.navigateOnBlogPostSelection($event)"
+      ></app-blog-list-item>
+    </ng-container>
+  </div>
 </section>

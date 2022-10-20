@@ -1,0 +1,10 @@
+.comment-input {
+  mat-form-field {
+    width: 100%;
+  }
+  .comment-input-actions{
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem
+  }
+}

@@ -4,16 +4,29 @@
 
 import {AbstractAuthenticationService} from "../app/shared/data-acess/abstraction/abstract-authentication-service";
 import {MockAuthenticationService} from "../app/shared/data-acess/mock-authentication.service";
+import {AbstractBlogPostService} from "../app/blog/data-acess/abstraction/abstract-blog-post.service";
+import {MockBlogPostService} from "../app/blog/data-acess/mock-blog-post.service";
+import {AbstractRegistrationService} from "../app/register/data-acess/abstraction/abstract-registration.service";
+import {MockRegistrationService} from "../app/register/data-acess/mock-registration.service";
 
 export const environment = {
   production: false,
   providers: {
     appModule: [
-    {
-      provide: AbstractAuthenticationService,
-      useClass: MockAuthenticationService
-    }
-  ]},
+      {
+        provide: AbstractAuthenticationService,
+        useClass: MockAuthenticationService
+      },
+      {
+        provide: AbstractBlogPostService,
+        useClass: MockBlogPostService
+      },
+      {
+        provide: AbstractRegistrationService,
+        useClass: MockRegistrationService
+      },
+    ]
+  },
 };
 
 /*
